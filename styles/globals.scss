@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: background-color 300ms ease-out;
+}
+
+.theme-dark {
+  --bg-theme-primary: hsl(0, 0%, 10%);
+  --bg-theme-secondary: hsl(0, 0%, 20%);
+  --bg-theme-tertiary: hsl(0, 0%, 30%);
+  --text-theme-primary: hsl(0, 0%, 80%);
+  --text-theme-secondary: hsl(0, 0%, 35%);
+}
+
+html {
+  --bg-100: hsl(0, 0%, 90%);
+  --bg-200: hsl(0, 0%, 80%);
+  --bg-300: hsl(0, 0%, 70%);
+  --bg-400: hsl(0, 0%, 60%);
+  --bg-500: hsl(0, 0%, 50%);
+  --bg-600: hsl(0, 0%, 40%);
+  --bg-700: hsl(0, 0%, 30%);
+  --bg-800: hsl(0, 0%, 20%);
+  --bg-900: hsl(0, 0%, 10%);
+
+  --text-100: hsl(0, 0%, 10%);
+  --text-200: hsl(0, 0%, 20%);
+  --text-300: hsl(0, 0%, 30%);
+  --text-400: hsl(0, 0%, 40%);
+  --text-500: hsl(0, 0%, 50%);
+  --text-600: hsl(0, 0%, 60%);
+  --text-700: hsl(0, 0%, 70%);
+  --text-800: hsl(0, 0%, 80%);
+  --text-900: hsl(0, 0%, 90%);
+
+  --bg-theme-primary: hsl(0, 0%, 85%);
+  --bg-theme-secondary: hsl(0, 0%, 85%);
+  --bg-theme-tertiary: hsl(0, 0%, 60%);
+  --text-theme-primary: hsl(0, 0%, 0%);
+  --text-theme-secondary: hsl(0, 0%, 75%);
+
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  @media (max-width: 800px) {
+    font-size: 55%;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-100);
+  background-color: var(--bg-100);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', 'Open Sans', sans-serif;
+}
+
+a {
+  color: var(--text-theme-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
