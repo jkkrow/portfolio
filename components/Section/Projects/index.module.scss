@@ -1,0 +1,17 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  gap: 3rem;
+}
+
+.image {
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  width: 60rem;
+  height: 60rem;
+  background-color: gray;
+  z-index: -1;
+}

@@ -1,0 +1,29 @@
+.navigation {
+  position: fixed;
+  width: 8rem;
+  height: 100vh;
+  // background-color: skyblue;
+
+  h1 {
+    margin: 2rem auto 2rem auto;
+    font-size: 4rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+
+.title {
+  height: 25rem;
+  overflow: hidden;
+}
+
+.sections {
+  transition: transform 200ms ease-out;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25rem;
+  }
+}

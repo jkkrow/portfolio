@@ -7,10 +7,9 @@
 
 .theme-dark {
   --bg-theme-primary: hsl(0, 0%, 10%);
-  --bg-theme-secondary: hsl(0, 0%, 20%);
-  --bg-theme-tertiary: hsl(0, 0%, 30%);
-  --text-theme-primary: hsl(0, 0%, 80%);
-  --text-theme-secondary: hsl(0, 0%, 35%);
+  --bg-theme-secondary: hsl(0, 0%, 90%);
+  --text-theme-primary: hsl(0, 0%, 90%);
+  --text-theme-secondary: hsl(0, 0%, 10%);
 }
 
 html {
@@ -34,15 +33,17 @@ html {
   --text-800: hsl(0, 0%, 80%);
   --text-900: hsl(0, 0%, 90%);
 
-  --bg-theme-primary: hsl(0, 0%, 85%);
-  --bg-theme-secondary: hsl(0, 0%, 85%);
-  --bg-theme-tertiary: hsl(0, 0%, 60%);
-  --text-theme-primary: hsl(0, 0%, 0%);
-  --text-theme-secondary: hsl(0, 0%, 75%);
+  --bg-theme-primary: hsl(0, 0%, 90%);
+  --bg-theme-secondary: hsl(0, 0%, 10%);
+  --text-theme-primary: hsl(0, 0%, 10%);
+  --text-theme-secondary: hsl(0, 0%, 90%);
 
   font-size: 62.5%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 800px) {
     font-size: 55%;
