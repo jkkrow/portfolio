@@ -1,29 +1,97 @@
-.navigation {
+.container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   width: 8rem;
   height: 100vh;
-  // background-color: skyblue;
-
-  h1 {
-    margin: 2rem auto 2rem auto;
-    font-size: 4rem;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
+  padding: 2rem 0;
+  z-index: 1;
 }
 
 .title {
   height: 25rem;
   overflow: hidden;
-}
 
-.sections {
-  transition: transform 200ms ease-out;
+  ul {
+    transition: transform 300ms ease-out;
+  }
 
   li {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 25rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+
+.controls {
+  position: relative;
+  margin-top: auto;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: 100px;
+      background-color: var(--bg-theme-secondary);
+      transform: scale(0.3);
+      transition: transform 300ms ease-out;
+    }
+
+    &::after {
+      position: absolute;
+      content: attr(data-label);
+      left: 100%;
+      padding: 1rem;
+      margin-left: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 5px;
+      color: var(--text-theme-secondary);
+      background-color: var(--bg-theme-secondary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 300ms ease-out;
+    }
+
+    &.active svg,
+    &.active::before,
+    &:hover svg,
+    &:hover::before,
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--text-theme-secondary);
+    transform: scale(0);
+    transition: transform 300ms ease-out;
   }
 }

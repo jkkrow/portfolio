@@ -5,7 +5,7 @@ import Container from '../components/Container';
 import Navigation from '../components/Navigation';
 import Home from '../components/Section/Home';
 import About from '../components/Section/About';
-import Projects from '../components/Section/Projects';
+import Project from '../components/Section/Project';
 import Blog from '../components/Section/Blog';
 import Contact from '../components/Section/Contact';
 
@@ -26,8 +26,6 @@ interface Props {
 const HomePage = ({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(posts);
-
   return (
     <>
       <Head>
@@ -41,7 +39,7 @@ const HomePage = ({
 
         <Home />
         <About />
-        <Projects />
+        <Project />
         <Blog />
         <Contact />
       </Container>
@@ -50,10 +48,19 @@ const HomePage = ({
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BLOG_API}/posts/featured`
-  );
-  const posts = await response.json();
+  let posts: Post[] = [];
+
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BLOG_API}/posts/featured`
+    );
+
+    posts = await response.json();
+  } catch (err) {
+    return {
+      props: { posts: [] },
+    };
+  }
 
   return {
     props: { posts },

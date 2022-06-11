@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 
-export type ActiveSection = 'home' | 'about' | 'projects' | 'blog' | 'contact';
+export type ActiveSection = 'home' | 'about' | 'project' | 'blog' | 'contact';
 
 interface AppContextProviderProps {
   children?: React.ReactNode;
@@ -28,7 +28,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
     );
 
     document
-      .querySelectorAll('#home, #about, #projects, #blog, #contact')
+      .querySelectorAll('#home, #about, #project, #blog, #contact')
       .forEach((target) => {
         observer.observe(target);
       });

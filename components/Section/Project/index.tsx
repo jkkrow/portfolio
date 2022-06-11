@@ -1,9 +1,9 @@
 import Section from '..';
 import classes from './index.module.scss';
 
-const Projects: React.FC = () => {
+const Project: React.FC = () => {
   return (
-    <Section id="projects">
+    <Section id="project">
       <div className={classes.info}>
         <h1>Sit non do eiusmod</h1>
         <h3>Sunt duis consectetur fugiat et et esse sint culpa qui.</h3>
@@ -20,4 +20,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default Project;

@@ -39,10 +39,46 @@ html {
   --text-theme-secondary: hsl(0, 0%, 90%);
 
   font-size: 62.5%;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-theme-secondary) var(--bg-theme-primary);
 
   ::-webkit-scrollbar {
-    display: none;
+    background-color: transparent;
+
+    &-thumb {
+      background-clip: padding-box;
+      border: 5px solid transparent;
+      border-radius: 100px;
+      background-color: var(--bg-theme-secondary);
+    }
+
+    &-thumb:hover {
+      background-color: var(--bg-600);
+    }
+
+    &-thumb:active {
+      background-color: var(--bg-700);
+    }
+  }
+
+  :-webkit-full-screen {
+    // display: none;
+    background-color: transparent;
+
+    &-thumb {
+      background-clip: padding-box;
+      border: 5px solid transparent;
+      border-radius: 100px;
+      background-color: var(--bg-theme-secondary);
+    }
+
+    &-thumb:hover {
+      background-color: var(--bg-600);
+    }
+
+    &-thumb:active {
+      background-color: var(--bg-700);
+    }
   }
 
   @media (max-width: 800px) {
