@@ -1,4 +1,5 @@
 import Section from '..';
+import Button from '../../../Element/Button';
 import classes from './index.module.scss';
 
 const Project: React.FC = () => {
@@ -13,6 +14,9 @@ const Project: React.FC = () => {
           quis. Magna mollit cupidatat nostrud aute nostrud aute eu duis.
           Officia ullamco eu proident labore tempor. Mollit est sit ullamco
           labore ut dolor eiusmod ipsum tempor.
+        </div>
+        <div>
+          <Button onClick={() => {}}>View Details</Button>
         </div>
       </div>
       <div className={classes.image}></div>

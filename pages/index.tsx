@@ -1,15 +1,15 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
-import Container from '../components/Container';
-import Navigation from '../components/Navigation';
-import Home from '../components/Section/Home';
-import About from '../components/Section/About';
-import Project from '../components/Section/Project';
-import Blog from '../components/Section/Blog';
-import Contact from '../components/Section/Contact';
+import Container from '../components/Layout/Container';
+import Navigation from '../components/Layout/Navigation';
+import Home from '../components/Layout/Section/Home';
+import About from '../components/Layout/Section/About';
+import Project from '../components/Layout/Section/Project';
+import Blog from '../components/Layout/Section/Blog';
+import Contact from '../components/Layout/Section/Contact';
 
-interface Post {
+export interface Post {
   slug: string;
   title: string;
   tags: string[];
@@ -40,7 +40,7 @@ const HomePage = ({
         <Home />
         <About />
         <Project />
-        <Blog />
+        <Blog posts={posts} />
         <Contact />
       </Container>
     </>
@@ -52,10 +52,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BLOG_API}/posts/featured`
+      `${process.env.NEXT_PUBLIC_BLOG_DOMAIN}/api/posts/featured`
     );
 
-    posts = await response.json();
+    const data = await response.json();
+    posts = data.posts;
   } catch (err) {
     return {
       props: { posts: [] },
