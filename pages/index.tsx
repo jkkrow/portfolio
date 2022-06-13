@@ -34,9 +34,8 @@ const HomePage = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navigation />
       <Container>
-        <Navigation />
-
         <Home />
         <About />
         <Project />

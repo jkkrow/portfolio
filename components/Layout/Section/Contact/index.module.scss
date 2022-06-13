@@ -1,12 +1,51 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 60rem;
-  gap: 3rem;
+  width: 100%;
+  max-width: 90rem;
+  padding: 3rem;
+  margin: auto;
+  background-color: var(--bg-theme-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .form {
-  width: 50rem;
-  height: 30rem;
-  background-color: gray;
+  font-size: 1.8rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  gap: 3rem;
+  overflow: hidden;
+  transition: max-height 500ms ease-in-out;
+
+  &.collapsed {
+    max-height: 0;
+  }
+
+  > div:first-child {
+    margin-bottom: 1rem;
+  }
+
+  > div:last-child {
+    margin-bottom: 3rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.error {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--text-900);
+  background-color: #cd131c;
+}
+
+.inline {
+  display: flex;
+  gap: 2rem;
 }
