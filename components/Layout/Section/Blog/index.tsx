@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 
 import Section from '..';
+import PostGrid from './Post/Grid';
 import { Post } from '../../../../pages';
 import classes from './index.module.scss';
 
@@ -10,9 +11,6 @@ interface BlogProps {
 }
 
 const Blog: React.FC<BlogProps> = ({ posts }) => {
-  console.log(posts);
-  console.log(process.env.NEXT_PUBLIC_BLOG_DOMAIN);
-
   return (
     <Section id="blog">
       <div className={classes.container}>
@@ -22,29 +20,13 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
           cillum.
         </p>
 
-        <ul className={classes.posts}>
-          {posts.map((post) => (
-            <li key={post.slug} className={classes.post}>
-              <div className={classes.image}>
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_BLOG_DOMAIN}/images/posts/${post.slug}/${post.image}`}
-                  alt={post.title}
-                  layout="fill"
-                />
-              </div>
-              <div className={classes.content}>
-                <h3>{post.title}</h3>
-                <p>{post.excerpt}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <PostGrid posts={posts} />
 
         <a
           className={classes.link}
           href={process.env.NEXT_PUBLIC_BLOG_DOMAIN}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <span>Sunt commodo</span>
           <HiOutlineExternalLink />
