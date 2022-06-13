@@ -61,26 +61,6 @@ html {
     }
   }
 
-  :-webkit-full-screen {
-    // display: none;
-    background-color: transparent;
-
-    &-thumb {
-      background-clip: padding-box;
-      border: 5px solid transparent;
-      border-radius: 100px;
-      background-color: var(--bg-theme-secondary);
-    }
-
-    &-thumb:hover {
-      background-color: var(--bg-600);
-    }
-
-    &-thumb:active {
-      background-color: var(--bg-700);
-    }
-  }
-
   @media (max-width: 800px) {
     font-size: 55%;
   }
@@ -92,14 +72,16 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: 'Roboto Condensed', 'Roboto Flex', sans-serif;
   color: var(--text-100);
   background-color: var(--bg-100);
 }
 
 h1,
 h2,
-h3 {
-  font-family: 'Oswald', 'Open Sans', sans-serif;
+h3,
+button {
+  font-family: 'Oswald', 'Roboto', sans-serif;
 }
 
 a {
@@ -112,8 +94,9 @@ ul {
 }
 
 button {
-  font: inherit;
-  cursor: pointer;
+  font-size: inherit;
+  font-weight: initial;
   border: none;
   outline: none;
+  cursor: pointer;
 }
