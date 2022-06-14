@@ -3,7 +3,7 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 
 import Section from '..';
 import PostGrid from './Post/Grid';
-import { Post } from '../../../../pages';
+import { Post } from 'pages';
 import classes from './index.module.scss';
 
 interface BlogProps {

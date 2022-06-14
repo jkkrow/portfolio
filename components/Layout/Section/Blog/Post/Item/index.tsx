@@ -1,5 +1,5 @@
-import Image from '../../../../../Element/Image';
-import { Post } from '../../../../../../pages';
+import Image from 'components/Element/Image';
+import { Post } from 'pages';
 import classes from './index.module.scss';
 
 interface PostItemProps {

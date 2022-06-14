@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useReducer, useRef } from 'react';
 
-import { validate, ValidatorAction } from '../../../lib/validators';
+import { validate, ValidatorAction } from 'lib/validators';
 import classes from './index.module.scss';
 
 interface State {

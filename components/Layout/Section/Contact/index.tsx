@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react';
 
 import Section from '..';
-import Input from '../../../Element/Input';
-import Button from '../../../Element/Button';
-import { useForm } from '../../../../hooks/form';
-import { useApi } from '../../../../hooks/api';
-import { VALIDATOR_EMAIL, VALIDATOR_REQUIRE } from '../../../../lib/validators';
+import Input from 'components/Element/Input';
+import Button from 'components/Element/Button';
+import { useForm } from 'hooks/form';
+import { useApi } from 'hooks/api';
+import { VALIDATOR_EMAIL, VALIDATOR_REQUIRE } from 'lib/validators';
 import classes from './index.module.scss';
 
 const COLLAPSE_DURATION = 1000;
@@ -36,19 +36,20 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    // if (!formState.isValid) {
-    //   console.log(formState.isValid);
-    //   setIsValidated(true);
-    //   return;
-    // }
+    if (!formState.isValid) {
+      setIsValidated(true);
+      return;
+    }
 
-    await api(async () => {
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve('asdf');
-          // reject({ message: 'Something went wrong!' });
-        }, 1000);
-      });
+    await api({
+      url: `${process.env.NEXT_PUBLIC_PORTFOLIO_API}/email`,
+      method: 'POST',
+      data: {
+        email: formState.inputs.email.value,
+        name: formState.inputs.name.value,
+        subject: formState.inputs.subject.value,
+        message: formState.inputs.message.value,
+      },
     });
   };
 

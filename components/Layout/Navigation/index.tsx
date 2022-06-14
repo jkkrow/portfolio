@@ -15,7 +15,7 @@ const sections: ActiveSection[] = [
   'contact',
 ];
 
-import { AppContext, ActiveSection } from '../../../context/AppContext';
+import { AppContext, ActiveSection } from 'context/AppContext';
 import classes from './index.module.scss';
 
 const Navigation: React.FC = () => {

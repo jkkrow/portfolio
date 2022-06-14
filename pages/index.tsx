@@ -1,13 +1,13 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
-import Container from '../components/Layout/Container';
-import Navigation from '../components/Layout/Navigation';
-import Home from '../components/Layout/Section/Home';
-import About from '../components/Layout/Section/About';
-import Project from '../components/Layout/Section/Project';
-import Blog from '../components/Layout/Section/Blog';
-import Contact from '../components/Layout/Section/Contact';
+import Container from 'components/Layout/Container';
+import Navigation from 'components/Layout/Navigation';
+import Home from 'components/Layout/Section/Home';
+import About from 'components/Layout/Section/About';
+import Project from 'components/Layout/Section/Project';
+import Blog from 'components/Layout/Section/Blog';
+import Contact from 'components/Layout/Section/Contact';
 
 export interface Post {
   slug: string;

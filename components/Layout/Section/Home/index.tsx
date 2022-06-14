@@ -1,5 +1,5 @@
 import Section from '..';
-import Button from '../../../Element/Button';
+import Button from 'components/Element/Button';
 import classes from './index.module.scss';
 
 const Home: React.FC = () => {
