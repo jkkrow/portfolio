@@ -1,30 +1,28 @@
 import { useState } from 'react';
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 export const useApi = <T = any>() => {
   const [status, setStatus] = useState<'pending' | 'success' | 'error'>();
-  const [data, setData] = useState<AxiosResponse<T>>();
+  const [data, setData] = useState<T>();
   const [error, setError] = useState<any>(null);
 
-  const api = async (config: AxiosRequestConfig) => {
+  const api = async (url: string, config: RequestInit) => {
     try {
       setStatus('pending');
       setError(null);
 
-      const data = await axios(config);
+      const response = await fetch(url, config);
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong!');
+      }
 
       setStatus('success');
       setData(data);
     } catch (err) {
       setStatus('error');
-
-      const axiosError = err as AxiosError;
-
-      if (axiosError.response && axiosError.response.data) {
-        setError((axiosError.response.data as any).message);
-      } else {
-        setError((err as Error).message);
-      }
+      setError((err as Error).message);
     }
   };
 

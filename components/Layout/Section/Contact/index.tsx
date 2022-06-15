@@ -41,15 +41,15 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    await api({
-      url: `${process.env.NEXT_PUBLIC_PORTFOLIO_API}/email`,
+    await api(`${process.env.NEXT_PUBLIC_PORTFOLIO_API}/email`, {
       method: 'POST',
-      data: {
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         email: formState.inputs.email.value,
         name: formState.inputs.name.value,
         subject: formState.inputs.subject.value,
         message: formState.inputs.message.value,
-      },
+      }),
     });
   };
 
