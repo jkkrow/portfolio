@@ -2,6 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
 import Container from 'components/Layout/Container';
+import Header from 'components/Layout/Header';
 import Navigation from 'components/Layout/Navigation';
 import Home from 'components/Layout/Section/Home';
 import About from 'components/Layout/Section/About';
@@ -34,8 +35,10 @@ const HomePage = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navigation />
       <Container>
+        <Header />
+        <Navigation />
+
         <Home />
         <About />
         <Project />

@@ -1,10 +1,15 @@
 .section {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 150rem;
+  max-width: 140rem;
   min-height: 100vh;
-  padding: 7rem 7rem 7rem 15rem;
+  padding: 6rem 6rem 6rem 14rem;
   margin: auto;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 8rem 4rem;
+  }
 }

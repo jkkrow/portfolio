@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  width: 8rem;
+  top: 2rem;
+  height: 25rem;
+  color: var(--text-theme-secondary);
+  mix-blend-mode: difference;
+  overflow: hidden;
+  z-index: 1;
+
+  ul {
+    transition: transform 300ms ease-out;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    cursor: default;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    right: 0;
+    transform: rotate(90deg) translateY(50%);
+  }
+}

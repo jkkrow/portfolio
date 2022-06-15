@@ -1,38 +1,7 @@
-.container {
+.navigation {
   position: fixed;
-  display: flex;
-  flex-direction: column;
+  bottom: 2rem;
   width: 8rem;
-  height: 100vh;
-  padding: 2rem 0;
-  z-index: 1;
-}
-
-.title {
-  height: 25rem;
-  overflow: hidden;
-
-  ul {
-    transition: transform 300ms ease-out;
-  }
-
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 25rem;
-  }
-
-  h1 {
-    font-size: 4rem;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
-}
-
-.controls {
-  position: relative;
-  margin-top: auto;
 
   ul {
     display: flex;
@@ -93,5 +62,30 @@
     color: var(--text-theme-secondary);
     transform: scale(0);
     transition: transform 300ms ease-out;
+  }
+}
+
+@media (max-width: 700px) {
+  .navigation {
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+
+    ul {
+      flex-direction: column-reverse;
+    }
+
+    li {
+      transform: rotate(-90deg);
+
+      &::after {
+        bottom: 100%;
+        left: initial;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+    }
   }
 }

@@ -2,6 +2,14 @@ import { createContext, useEffect, useState } from 'react';
 
 export type ActiveSection = 'home' | 'about' | 'project' | 'blog' | 'contact';
 
+export const sections: ActiveSection[] = [
+  'home',
+  'about',
+  'project',
+  'blog',
+  'contact',
+];
+
 interface AppContextProviderProps {
   children?: React.ReactNode;
 }
