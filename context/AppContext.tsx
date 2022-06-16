@@ -35,11 +35,11 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
       { threshold: 0.6 }
     );
 
-    document
-      .querySelectorAll('#home, #about, #project, #blog, #contact')
-      .forEach((target) => {
-        observer.observe(target);
-      });
+    const selectors = sections.map((section) => `#${section}`).join(', ');
+
+    document.querySelectorAll(selectors).forEach((target) => {
+      observer.observe(target);
+    });
 
     return () => {
       observer.disconnect();
