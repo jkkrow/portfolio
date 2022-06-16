@@ -6,11 +6,12 @@
 
 .skills {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
-.column {
-  width: 25rem;
-  height: 40rem;
-  background-color: gray;
+.certification {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
