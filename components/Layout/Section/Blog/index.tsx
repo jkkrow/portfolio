@@ -28,7 +28,7 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <span>Sunt commodo</span>
+          <span>See all posts</span>
           <HiOutlineExternalLink />
         </a>
       </div>

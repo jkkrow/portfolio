@@ -1,0 +1,14 @@
+.social {
+  display: flex;
+  gap: 2rem;
+
+  li {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

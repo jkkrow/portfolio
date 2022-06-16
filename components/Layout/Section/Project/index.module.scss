@@ -22,9 +22,10 @@
 }
 
 .image {
-  width: 50rem;
-  height: 50rem;
+  width: 100%;
+  max-width: 50rem;
   margin-left: auto;
   background-color: gray;
+  aspect-ratio: 1/1;
   z-index: -1;
 }
