@@ -14,16 +14,31 @@ interface AppContextProviderProps {
   children?: React.ReactNode;
 }
 
-export const AppContext = createContext<{ activeSection: ActiveSection }>({
+export const AppContext = createContext<{
+  activeSection: ActiveSection;
+  initialLoading: boolean;
+}>({
   activeSection: 'home',
+  initialLoading: true,
 });
 
 const AppContextProvider: React.FC<AppContextProviderProps> = ({
   children,
 }) => {
   const [activeSection, setActiveSection] = useState<ActiveSection>('home');
+  const [initialLoading, setInitialLoading] = useState(true);
 
   useEffect(() => {
+    const timer = setTimeout(() => setInitialLoading(false), 1500);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (initialLoading) return;
+
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -44,10 +59,10 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [initialLoading]);
 
   return (
-    <AppContext.Provider value={{ activeSection }}>
+    <AppContext.Provider value={{ activeSection, initialLoading }}>
       {children}
     </AppContext.Provider>
   );

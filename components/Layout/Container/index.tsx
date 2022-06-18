@@ -1,3 +1,7 @@
+import { useContext } from 'react';
+
+import Loader from '../Loader';
+import { AppContext } from 'context/AppContext';
 import classes from './index.module.scss';
 
 interface ContainerProps {
@@ -5,9 +9,12 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
+  const { initialLoading } = useContext(AppContext);
+
   return (
     <main id="container" className={classes.container}>
-      {children}
+      <Loader on={initialLoading} />
+      {!initialLoading && children}
     </main>
   );
 };

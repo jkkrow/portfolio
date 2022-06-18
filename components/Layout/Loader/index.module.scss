@@ -1,0 +1,46 @@
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  border-left: 2px solid var(--text-theme-primary);
+  background-color: var(--bg-theme-primary);
+  z-index: 99;
+  transition: transform 500ms ease-out;
+}
+
+.loader {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+  background-color: var(--bg-theme-secondary);
+  animation: loader 1500ms ease-out forwards;
+}
+
+.exitActive {
+  transform: translateX(100%);
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    clip-path: circle(100%);
+  }
+  25% {
+    transform: rotate(90deg);
+    clip-path: circle(100%);
+  }
+  50% {
+    transform: rotate(180deg);
+    clip-path: circle(100%);
+  }
+  75% {
+    transform: rotate(270deg);
+    clip-path: circle(100%);
+  }
+  100% {
+    transform: rotate(360deg);
+    clip-path: circle(0%);
+  }
+}
