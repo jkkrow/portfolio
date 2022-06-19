@@ -4,14 +4,42 @@
   gap: 3rem;
 }
 
-.skills {
+.header {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 3rem;
+}
+
+.main {
+  display: flex;
+  gap: 3rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  padding: 3rem;
+  gap: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .certification {
   display: flex;
   align-items: center;
+  padding: 3rem;
   gap: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1100px) {
+  .main {
+    flex-direction: column;
+  }
 }
