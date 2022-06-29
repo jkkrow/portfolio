@@ -6,7 +6,12 @@
   min-height: 100vh;
   padding: 6rem 6rem 6rem 14rem;
   margin: auto;
+  margin-bottom: 20rem;
   font-size: 1.8rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 700px) {

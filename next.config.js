@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['dev-blog-jkkrow.vercel.app'],
+    domains: ['blog.junkukim.com'],
   },
 };
 

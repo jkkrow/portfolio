@@ -27,7 +27,7 @@
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   padding: 3rem;
   gap: 3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .certification {
@@ -35,7 +35,7 @@
   align-items: center;
   padding: 3rem;
   gap: 3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 1100px) {
