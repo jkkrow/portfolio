@@ -7,39 +7,41 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
   gap: 3rem;
 
   > div {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     gap: 3rem;
   }
+}
+
+.skills,
+.certification {
+  height: 100%;
+  padding: 3rem;
+  gap: 3rem;
+  box-shadow: 0 0 0 1px var(--text-700);
 }
 
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  padding: 3rem;
-  gap: 3rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .certification {
   display: flex;
   align-items: center;
-  padding: 3rem;
-  gap: 3rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 1100px) {
-  .main {
-    flex-direction: column;
-  }
 }

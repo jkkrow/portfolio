@@ -47,7 +47,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.4 }
     );
 
     const selectors = sections.map((section) => `#${section}`).join(', ');

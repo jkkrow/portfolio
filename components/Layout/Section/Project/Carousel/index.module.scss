@@ -1,0 +1,11 @@
+@import '../index.module.scss';
+
+.carousel {
+  flex: 1 1 30%;
+  width: 50%;
+}
+
+.image {
+  background-color: gray;
+  aspect-ratio: 3/2;
+}

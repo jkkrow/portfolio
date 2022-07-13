@@ -1,12 +1,22 @@
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // min-width: 12rem;
   height: 5rem;
   padding: 0 3rem;
+  gap: 1rem;
   cursor: pointer;
   border-radius: 5px;
   color: var(--bg-theme-primary);
   background-color: var(--text-theme-primary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: all 200ms ease-out;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
 
   &.wide {
     width: 100%;

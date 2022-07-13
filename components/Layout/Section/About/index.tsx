@@ -11,7 +11,7 @@ const About: React.FC = () => {
     <Section id="about">
       <div className={classes.container}>
         <div className={classes.header}>
-          <h1>Tempor irure officia</h1>
+          <h1>About Me</h1>
           <p>
             Aute anim velit incididunt duis consequat laborum mollit
             exercitation nulla occaecat excepteur irure.
@@ -54,9 +54,9 @@ const About: React.FC = () => {
             <h1>Certification</h1>
             <div className={classes.certification}>
               <Script
+                src="//cdn.credly.com/assets/utilities/embed.js"
                 type="text/javascript"
                 async
-                src="//cdn.credly.com/assets/utilities/embed.js"
               />
               <div
                 data-iframe-width="110"

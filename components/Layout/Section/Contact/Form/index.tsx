@@ -122,7 +122,7 @@ const Form: React.FC = () => {
     <form className={classes.form} noValidate onSubmit={sendEmailHandler}>
       <div className={groupClasses}>
         <div className={classes.header}>
-          <h2>Contact me</h2>
+          <h2>Contact Me</h2>
           {error && !isPending && <div className={classes.error}>{error}</div>}
           <div className={classes.social}>
             <Social />

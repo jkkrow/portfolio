@@ -14,10 +14,10 @@ const Blog: React.FC<BlogProps> = ({ posts }) => {
   return (
     <Section id="blog">
       <div className={classes.container}>
-        <h1>Id incididunt exercitation</h1>
+        <h1>A Full Stack Web Development Blog</h1>
         <p>
-          Ex dolore voluptate occaecat veniam deserunt exercitation veniam ad
-          cillum.
+          Built with NextJS, contains a number of posts about topics that
+          I&apos;ve done in my other projects.
         </p>
 
         <PostGrid posts={posts} />

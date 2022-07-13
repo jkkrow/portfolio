@@ -16,8 +16,8 @@ const Aside: React.FC = () => {
 
   return (
     <div className={classes.aside} style={{ height }} ref={asideRef}>
-      <h1>Enim nulla eiusmod exercitation </h1>
-      <p>Dolor cillum ad reprehenderit officia sunt voluptate.</p>
+      <h1>Social Links</h1>
+      <p>If you have any question, don&apos;t hesitate to get in touch!</p>
       <Social />
     </div>
   );

@@ -10,10 +10,8 @@ const Home: React.FC = () => {
   return (
     <Section id="home">
       <div className={classes.container}>
-        <h1>Ea exercitation nulla ullamco</h1>
-        <p>
-          Adipisicing elit excepteur officia sint magna. Ut labore velit nulla
-        </p>
+        <h1>Hi, I&apos;m Junku Kim</h1>
+        <p>Full Stack Web Developer & AWS Cloud Engineer</p>
 
         <div className={classes.buttons}>
           <Button onClick={navigateToContactHandler}>Contact</Button>

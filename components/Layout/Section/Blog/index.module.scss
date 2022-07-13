@@ -6,8 +6,9 @@
 
 .link {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  width: max-content;
+  margin-left: auto;
   gap: 1rem;
   font-size: larger;
 

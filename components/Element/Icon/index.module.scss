@@ -5,14 +5,15 @@
   gap: 1rem;
 
   > svg {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   &::after {
     content: attr(data-label);
     padding: 1rem;
     font-weight: 600;
+    font-size: 1.5rem;
     text-transform: uppercase;
   }
 }
