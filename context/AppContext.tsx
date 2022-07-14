@@ -29,7 +29,7 @@ const AppContextProvider: React.FC<AppContextProviderProps> = ({
   const [initialLoading, setInitialLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setInitialLoading(false), 1500);
+    const timer = setTimeout(() => setInitialLoading(false), 2000);
 
     return () => {
       clearTimeout(timer);

@@ -1,3 +1,4 @@
+import Image from 'components/Element/Image';
 import Script from 'next/script';
 import { FaReact, FaCss3Alt, FaSass, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiRedux, SiMongodb } from 'react-icons/si';
@@ -51,20 +52,21 @@ const About: React.FC = () => {
           </div>
 
           <div>
-            <h1>Certification</h1>
-            <div className={classes.certification}>
-              <Script
-                src="//cdn.credly.com/assets/utilities/embed.js"
-                type="text/javascript"
-                async
-              />
-              <div
-                data-iframe-width="110"
-                data-iframe-height="150"
-                data-share-badge-id="9728ee39-7a02-460a-b168-66ae5c4f44c0"
-                data-share-badge-host="https://www.credly.com"
-              />
-              <h4>AWS Certified Developer - Associate</h4>
+            <h1>Certificates</h1>
+            <div className={classes.certificates}>
+              <a
+                href="https://www.credly.com/badges/9728ee39-7a02-460a-b168-66ae5c4f44c0/public_url"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={classes.badge}>
+                  <Image
+                    src="/images/certificates/aws-dva.png"
+                    alt="AWS Certified Developer - Associate"
+                  />
+                </div>
+                <h4>AWS Certified Developer - Associate</h4>
+              </a>
             </div>
           </div>
         </div>

@@ -4,43 +4,99 @@
   justify-content: center;
   align-items: center;
   inset: 0;
-  border-left: 2px solid var(--text-theme-primary);
-  background-color: var(--bg-theme-primary);
+  transition: all 300ms ease-out;
   z-index: 99;
-  transition: transform 500ms ease-out;
 }
 
 .loader {
-  width: 5rem;
-  height: 5rem;
+  position: relative;
+  display: flex;
+  width: 10rem;
+  height: 10rem;
   border-radius: 5px;
-  background-color: var(--bg-theme-secondary);
-  animation: loader 1500ms ease-out forwards;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--bg-theme-primary);
+    animation: mask 600ms linear 1200ms forwards;
+  }
+
+  span {
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--bg-theme-secondary);
+
+    &:nth-of-type(odd) {
+      width: 1rem;
+      height: 100%;
+      animation: border-vertical 300ms linear backwards;
+    }
+
+    &:nth-of-type(even) {
+      width: 100%;
+      height: 1rem;
+      animation: border-horizontal 300ms linear backwards;
+    }
+
+    &:nth-of-type(1) {
+      transform-origin: top;
+    }
+
+    &:nth-of-type(2) {
+      bottom: 0;
+      transform-origin: left;
+      animation-delay: 300ms;
+    }
+
+    &:nth-of-type(3) {
+      right: 0;
+      transform-origin: bottom;
+      animation-delay: 600ms;
+    }
+
+    &:nth-of-type(4) {
+      transform-origin: right;
+      animation-delay: 900ms;
+    }
+  }
 }
 
 .exitActive {
-  transform: translateX(100%);
+  transform: scale(0);
 }
 
-@keyframes loader {
+@keyframes mask {
   0% {
-    transform: rotate(0deg);
-    clip-path: circle(100%);
-  }
-  25% {
-    transform: rotate(90deg);
-    clip-path: circle(100%);
-  }
-  50% {
-    transform: rotate(180deg);
-    clip-path: circle(100%);
-  }
-  75% {
-    transform: rotate(270deg);
-    clip-path: circle(100%);
+    clip-path: inset(0% round 0%);
   }
   100% {
-    transform: rotate(360deg);
-    clip-path: circle(0%);
+    clip-path: inset(100%);
+  }
+}
+
+@keyframes border-vertical {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes border-horizontal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }

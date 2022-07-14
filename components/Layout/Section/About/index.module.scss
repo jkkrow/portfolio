@@ -16,7 +16,7 @@
 
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   gap: 3rem;
 
   > div {
@@ -29,7 +29,7 @@
 }
 
 .skills,
-.certification {
+.certificates {
   height: 100%;
   padding: 3rem;
   gap: 3rem;
@@ -38,10 +38,17 @@
 
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 
-.certification {
+.certificates,
+.certificates a {
   display: flex;
   align-items: center;
+  gap: 3rem;
+}
+
+.badge {
+  width: 10rem;
+  height: 10rem;
 }
