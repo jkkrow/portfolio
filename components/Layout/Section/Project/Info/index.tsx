@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript, SiRedux, SiMongodb } from 'react-icons/si';
 
 import Button from 'components/Element/Button';
 import classes from './index.module.scss';
@@ -8,7 +10,7 @@ const Info: React.FC = () => {
   return (
     <div className={classes.info}>
       <h1>WatchTrees</h1>
-      <h3>A Video Streaming Platform with Tree Data Structure.</h3>
+      <h3>A Video Streaming App with Tree Data Structure.</h3>
       <div>
         <Swiper
           modules={[Pagination]}
@@ -23,21 +25,29 @@ const Info: React.FC = () => {
           loop
           grabCursor
         >
-          <SwiperSlide>
-            <p className={classes.description}>
-              Sit laborum sunt sit veniam labore est dolore commodo officia
-              veniam nisi officia proident. Ipsum laboris anim cillum culpa sunt
-              ex nulla quis. Magna mollit cupidatat nostrud aute nostrud aute eu
-              duis.
-            </p>
+          <SwiperSlide className={classes.slide}>
+            <div className={classes.description}>
+              <p>Provides on-demand videos (VOD) in adaptive media formats</p>
+              <p>
+                Tree structured videos allow viewers to select next video among
+                child nodes.
+              </p>
+              <div className={classes.stacks}>
+                <SiTypescript />
+                <FaReact />
+                <SiRedux />
+                <FaNodeJs />
+                <SiMongodb />
+              </div>
+            </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={classes.slide}>
             <ul className={classes.description}>
-              <li>Commodo duis eu adipisicing non occaecat.</li>
-              <li>Eiusmod amet officia Lorem commodo excepteur.</li>
-              <li>
-                Sint incididunt eiusmod id dolore eu sunt anim reprehenderit.
-              </li>
+              <h4>Main Features:</h4>
+              <li>Adaptive Bitrate Streaming</li>
+              <li>Watch Actively with &quot;Select-and-Continue&quot;</li>
+              <li>User Authentication</li>
+              <li>Token Based Authorization</li>
             </ul>
           </SwiperSlide>
         </Swiper>

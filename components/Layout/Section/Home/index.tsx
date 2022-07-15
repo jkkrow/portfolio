@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     <Section id="home">
       <div className={classes.container}>
         <h1>Hi, I&apos;m Junku Kim</h1>
-        <p>Full Stack Web Developer & AWS Cloud Engineer</p>
+        <big>Full Stack Web Developer & AWS Cloud Engineer</big>
 
         <div className={classes.buttons}>
           <Button onClick={navigateToContactHandler}>Contact</Button>

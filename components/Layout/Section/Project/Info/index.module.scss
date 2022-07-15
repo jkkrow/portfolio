@@ -12,10 +12,28 @@
 .description {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
+  height: 100%;
+  padding-bottom: 5rem;
   gap: 2rem;
+
+  li {
+    list-style: inside;
+  }
+}
+
+.stacks {
+  display: flex;
+  margin-top: auto;
+  gap: 1.5rem;
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.slide {
+  height: auto;
 }
 
 .horizontal {

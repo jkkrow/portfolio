@@ -8,4 +8,8 @@
 .image {
   background-color: gray;
   aspect-ratio: 3/2;
+
+  &:hover {
+    background-color: darkgray;
+  }
 }

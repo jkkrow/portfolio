@@ -1,5 +1,4 @@
 import Image from 'components/Element/Image';
-import Script from 'next/script';
 import { FaReact, FaCss3Alt, FaSass, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiRedux, SiMongodb } from 'react-icons/si';
 
@@ -14,10 +13,13 @@ const About: React.FC = () => {
         <div className={classes.header}>
           <h1>About Me</h1>
           <p>
-            Aute anim velit incididunt duis consequat laborum mollit
-            exercitation nulla occaecat excepteur irure.
+            I&apos;m a Full Stack Web Developer specialized in Typescript and
+            AWS.
           </p>
-          <p>Excepteur nulla est enim duis duis anim ut enim duis duis.</p>
+          <p>
+            I build solid projects from scratch, making a abstract idea turned
+            into a real world.
+          </p>
         </div>
 
         <div className={classes.main}>
