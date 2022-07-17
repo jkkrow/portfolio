@@ -20,16 +20,27 @@ const Carousel: React.FC = () => {
         grabCursor
       >
         <SwiperSlide>
-          <div className={classes.image} />
+          <div className={classes.image}>
+            <Image
+              src="/images/projects/wt-example-1 1.gif"
+              alt="wt-example-1"
+            />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={classes.image} />
+          <div className={classes.image}>
+            <Image src="/images/projects/wt-example-2.gif" alt="wt-example-2" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={classes.image} />
+          <div className={classes.image}>
+            <Image src="/images/projects/wt-example-3.gif" alt="wt-example-3" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={classes.image} />
+          <div className={classes.image}>
+            <Image src="/images/projects/wt-example-4.gif" alt="wt-example-4" />
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>
