@@ -29,7 +29,6 @@ const Image: React.FC<ImageProps> = ({ src, alt }) => {
         src={src}
         alt={alt}
         layout="fill"
-        priority
         onLoadingComplete={imageLoadedHandler}
       />
     </div>

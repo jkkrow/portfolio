@@ -21,24 +21,25 @@ const Carousel: React.FC = () => {
       >
         <SwiperSlide>
           <div className={classes.image}>
-            <Image
-              src="/images/projects/wt-example-1 1.gif"
-              alt="wt-example-1"
-            />
+            <Image src="/images/projects/wt-example-1.png" alt="wt-example-1" />
+            <Image src="/images/projects/wt-example-1.gif" alt="wt-example-1" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classes.image}>
+            <Image src="/images/projects/wt-example-2.png" alt="wt-example-2" />
             <Image src="/images/projects/wt-example-2.gif" alt="wt-example-2" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classes.image}>
+            <Image src="/images/projects/wt-example-3.png" alt="wt-example-3" />
             <Image src="/images/projects/wt-example-3.gif" alt="wt-example-3" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={classes.image}>
+            <Image src="/images/projects/wt-example-4.png" alt="wt-example-4" />
             <Image src="/images/projects/wt-example-4.gif" alt="wt-example-4" />
           </div>
         </SwiperSlide>

@@ -6,10 +6,21 @@
 }
 
 .image {
-  background-color: gray;
+  position: relative;
+  border: 1px solid var(--text-700);
   aspect-ratio: 3/2;
 
-  &:hover {
-    background-color: darkgray;
+  > *:first-of-type {
+    position: absolute;
+    inset: 0;
+  }
+
+  > *:last-of-type {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  &:hover > *:last-of-type {
+    opacity: 1;
   }
 }

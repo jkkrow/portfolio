@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
         <div className={classes.buttons}>
           <Button onClick={navigateToContactHandler}>Contact</Button>
-          <Button onClick={() => {}}>Resume</Button>
+          {/* <Button onClick={() => {}}>Resume</Button> */}
         </div>
       </div>
     </Section>
