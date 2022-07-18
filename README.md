@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <a href="https://junkukim.com">
+    <img src="public/icons/favicon.ico" alt="Logo" width="100" height="100">
+  </a>
+  <h2 align="center">Portfolio</h2>
+  <p align="center">
+    My portfolio website built with <a href="https://nextjs.org">NextJS</a>
+    <br />
+    <a href="https://junkukim.com">
+      <strong>Explore the live website »</strong>
+    </a>
+  </p>
+</div>
+
+### Built with
+
+- ![Next.JS](https://img.shields.io/badge/Next.js-000000.svg?&style=for-the-badge&logo=Next.js&logoColor=white)
+- ![Typescript](https://img.shields.io/badge/Typescript-3178C6.svg?&style=for-the-badge&logo=Typescript&logoColor=white)
+- ![Sass](https://img.shields.io/badge/Sass-CC6699.svg?&style=for-the-badge&logo=Sass&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white)
 
 ## Getting Started
 
-First, run the development server:
+This is an instruction of how to set up the project locally. To get a local copy up and running, follow these simple steps.
+
+### Requirements
+
+You must have Node.js and npm installed on your machine. This project was built against the following versions:
+ 
+- Node v16.3.0
+- npm v7.15.1
+
+### Installation
+
+To start the project, clone the repository and install dependencies with following command:
+
+```bash
+npm install
+```
+
+You need to setup environment variables. Create `.env` file and configure necessary variables. Then, start the app by running:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Browser Support
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| ![Chrome](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/72.0.0/chrome/chrome.svg)Chrome | ![Firefox](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/72.0.0/firefox/firefox.svg)Firefox |
+| :---------: | :---------: |
+| Latest &#10003;| Latest &#10003;
